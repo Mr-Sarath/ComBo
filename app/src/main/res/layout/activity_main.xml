@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/boogaloo"
+                android:text="COMBO"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <View
+                android:id="@+id/view_result"
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:background="@drawable/shape_home"
+                app:layout_constraintBottom_toTopOf="@+id/guidelineH"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guidelineH" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/view_result"
+                app:layout_constraintEnd_toEndOf="@+id/view_result"
+                app:layout_constraintTop_toTopOf="@+id/view_result"
+                app:layout_constraintBottom_toBottomOf="@+id/view_result"
+                android:text="result"
+                android:fontFamily="@font/boogaloo"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"/>
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:backgroundTint="#8BC34A"
+                android:text="Choose First"
+                android:textColor="@color/black"
+                android:fontFamily="@font/boogaloo"
+                android:paddingVertical="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+
+            <View
+                android:id="@+id/view_first"
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:background="@drawable/shape_home"
+                app:layout_constraintStart_toStartOf="@+id/btn_first"
+                app:layout_constraintEnd_toEndOf="@+id/btn_first"
+                app:layout_constraintTop_toBottomOf="@+id/btn_first"
+                android:layout_marginTop="@dimen/_15sdp"/>
+
+
+            <View
+                android:id="@+id/view_second"
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:background="@drawable/shape_home"
+                app:layout_constraintStart_toStartOf="@+id/btn_second"
+                app:layout_constraintEnd_toEndOf="@+id/btn_second"
+                app:layout_constraintBottom_toTopOf="@+id/btn_second"
+                android:layout_marginBottom="@dimen/_15sdp"/>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_second"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:backgroundTint="#8BC34A"
+                android:text="Choose Second"
+                android:textColor="@color/black"
+                android:fontFamily="@font/boogaloo"
+                android:paddingVertical="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
